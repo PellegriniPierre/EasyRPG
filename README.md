@@ -6,6 +6,6 @@ En train de mettre en place l'import de modèle, de textures, etc.. dans un envi
 
 Avec en complément blender pour la gestion de l'environnement. 
 
-Du tout opensource et gratuit, ça fait du bien à voir!! 
+Du tout opensource, gratuit et multiplateforme ça fait du bien à voir!! 
 
 Have fun!!
