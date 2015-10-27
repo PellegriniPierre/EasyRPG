@@ -21,7 +21,10 @@ public class HelloAssets extends SimpleApplication {
  
     @Override
     public void simpleInitApp() {
-        viewPort.setBackgroundColor(ColorRGBA.Blue);
+        int debtimer = 1;
+        int finTimer = debtimer + 500;
+        viewPort.setBackgroundColor(ColorRGBA.randomColor());
+        flyCam.setMoveSpeed(50f);
         Spatial teapot = assetManager.loadModel("Models/Teapot/Teapot.obj");
         Material mat_default = new Material( 
             assetManager, "Common/MatDefs/Misc/ShowNormals.j3md");
