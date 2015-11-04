@@ -1,6 +1,7 @@
 package jme3test.helloworld;
  
 import com.jme3.app.SimpleApplication;
+import com.jme3.asset.plugins.HttpZipLocator;
 import com.jme3.font.BitmapText;
 import com.jme3.light.DirectionalLight;
 import com.jme3.material.Material;
@@ -21,10 +22,15 @@ public class HelloAssets extends SimpleApplication {
  
     @Override
     public void simpleInitApp() {
-        int debtimer = 1;
-        int finTimer = debtimer + 500;
         viewPort.setBackgroundColor(ColorRGBA.randomColor());
         flyCam.setMoveSpeed(50f);
+        
+        assetManager.registerLocator(
+        "http://jmonkeyengine.googlecode.com/files/wildhouse.zip", 
+        HttpZipLocator.class);
+        Spatial scene = assetManager.loadModel("main.scene");
+        rootNode.attachChild(scene);        
+        
         Spatial teapot = assetManager.loadModel("Models/Teapot/Teapot.obj");
         Material mat_default = new Material( 
             assetManager, "Common/MatDefs/Misc/ShowNormals.j3md");
